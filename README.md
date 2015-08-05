@@ -33,7 +33,7 @@ This file contains the list of references which have been deprecated in v2.0.0 o
 The key for each reference is its dot notation representation as a *String* (e.g. `_spoor._isEnabled`). The following attributes can be set for each reference:
 
 Attribute | Type | Description
-———— | —— | —————
+:-------- | :--- | :----------
 **`negate`** | *Boolean* | This is used to specify where references *should* be included in newer versions of Adapt. By default, it is assumed that anything listed in the blacklist is deprecated, and therefore not allowed. This allows for circumstances where a new attribute has been added, and is required for existing functionality.
 **`prerequisite`** | *String* | This is another dot notation string, and can be used to specify that a parent exists. For example, in the case of `_spoor._isEnabled`, you can specify `_spoor` as a prerequisite to ensure that no output is given for courses which don’t have the `_spoor’ object.
 **`message`** | *String* | This is presented to the user if any matches are found. 
