@@ -1,0 +1,20 @@
+{
+  "name": "adapt-json-scanner",
+  "version": "0.0.1",
+  "description": "Scans an Adapt course for deprecated JSON",
+  "main": "scan.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taylortom/adapt-json-scanner.git"
+  },
+  "author": "Thomas Taylor <me@taylortom.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taylortom/adapt-json-scanner/issues"
+  },
+  "homepage": "https://github.com/taylortom/adapt-json-scanner",
+  "devDependencies": {
+    "async": "*",
+    "underscore": "*"
+  }
+}

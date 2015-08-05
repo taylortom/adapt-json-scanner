@@ -1,0 +1,15 @@
+{
+  "config.json": {
+      "_spoor._isEnabled": {
+        "negate": true,
+        "prerequisite": "_spoor",
+        "message": "Spoor now needs to be specifically enabled to function.",
+        "link": ""
+      }
+  },
+  "articles.json": {
+      "_assessment._banks._isEnabled": {
+        "message": "Please use _assessment._banks._isOn"
+      }
+  }
+}
