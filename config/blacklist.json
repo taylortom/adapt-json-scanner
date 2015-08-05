@@ -3,13 +3,13 @@
       "_spoor._isEnabled": {
         "negate": true,
         "prerequisite": "_spoor",
-        "message": "Spoor now needs to be specifically enabled to function.",
-        "link": ""
+        "message": "Spoor now needs to be specifically enabled to function."
       }
   },
   "articles.json": {
-      "_assessment._banks._isEnabled": {
-        "message": "Please use _assessment._banks._isOn"
+      "_assessment": {
+        "message": "The assessment extension has been completely rewritten for v2.0.0. Please check the wiki carefully for changes.",
+        "link": "https://github.com/adaptlearning/adapt-contrib-assessment/wiki"
       }
   }
 }
