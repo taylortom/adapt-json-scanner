@@ -17,7 +17,7 @@ exports = module.exports = function(scanResults) {
             var html = template(generateModel());
 
             fs.writeFile(OUTPUT_FILE, html, function(error) {
-                if(error) console.log(error);
+                if(error) return console.log(error);
             });
 
             if(config.autoOpen) opener(OUTPUT_FILE);

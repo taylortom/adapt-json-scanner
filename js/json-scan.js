@@ -12,6 +12,7 @@ exports = module.exports = function(config, blacklist, callback) {
     // Recursively scans dir, calling scanObject on anything in blacklist
     function scanDir(dir, callback) {
         fs.readdir(dir, function onReaddir(error, files) {
+            if(error) return console.log(error);
             async.each(files, function onAsyncLoop(file, done) {
                 var filepath = path.join(dir, file);
                 // in blacklist, scan JSON
@@ -20,7 +21,7 @@ exports = module.exports = function(config, blacklist, callback) {
                 }
                 else {
                     // if directory, go deeper
-                    fs.stat(filepath, function onFSStat(err, data) {
+                    fs.stat(filepath, function onFSStat(error, data) {
                         if(data.isDirectory()) scanDir(filepath, done);
                         else done();
                     })
@@ -28,6 +29,7 @@ exports = module.exports = function(config, blacklist, callback) {
             },
             // when done with all files, rip out any violations
             function(error) {
+                if(error) return console.log(error);
                 var violations = {};
                 // each file type
                 for(var fileKey in blacklist) {
@@ -48,6 +50,7 @@ exports = module.exports = function(config, blacklist, callback) {
         // reads JSON file and calls scanObject appropriately
         function scanJSON(filename, filepath, callback) {
             fs.readFile(filepath, function onReadFile(error, data) {
+                if(error) return console.log(error);
                 var jsonData = JSON.parse(data);
                 // content objects (A,B,Cs) are [], configs are {}
                 if(_.isArray(jsonData)) {
