@@ -30,8 +30,6 @@ There are various settings available in `config/config.json` to allow for more f
 
 Attribute | Type | Description
 :-------- | :--- | :----------
-**`coursesDir`** | *String* | This is the folder the tool searches. Default value is `courses`, in the root folder for the tool.
-
 **`output.format`** | *String* | Determines how the output is formatted. Accepted values: html, console.
 **`output.autoOpen`** | *Boolean* | Whether the output file should open automatically when generated.
 

@@ -4,9 +4,11 @@ var fs = require("fs");
 var path = require("path");
 
 exports = module.exports = function(config, blacklist, callback) {
+    var COURSES_DIR = "courses";
+
     // the (self)starting point
     (function start() {
-        scanDir(config.coursesDir, callback);
+        scanDir(COURSES_DIR, callback);
     })();
 
     // Recursively scans dir, calling scanObject on anything in blacklist
