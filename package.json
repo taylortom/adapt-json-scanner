@@ -15,6 +15,8 @@
   "homepage": "https://github.com/taylortom/adapt-json-scanner",
   "devDependencies": {
     "async": "*",
+    "handlebars": "^3.0.3",
+    "opener": "^1.4.1",
     "underscore": "*"
   }
 }

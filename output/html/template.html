@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Adapt JSON Scanner - Results</title>
+        <style type="text/css">
+            body {
+                padding: 20px;
+                font-family: sans-serif;
+                font-size: 10pt;
+            }
+            p {
+                margin: 10px 0 10px 0;
+            }
+            a {
+                text-decoration: none;
+                font-weight: bold;
+                color: #333;
+            }
+            .code {
+                font-family: monospace;
+            }
+            .faded {
+                color: rgba(0,0,0,0.7);
+            }
+            .rounded_block {
+                border: 1px solid #999;
+                border-radius: 3px;
+                padding: 15px;
+                background-color: lightgray;
+            }
+            .warning .header {
+                padding: 10px 0 10px 0;
+            }
+            .warning .header .title{
+                font-weight: bold;
+                font-size: 110%;
+            }
+            .code {
+               font-family: monospace;
+           }
+            .files {
+                color: #000;
+                border: 1px solid #7B7B7B;
+                border-radius: 3px;
+                padding: 10px;
+                background-color: darkgray;
+                margin-bottom: 15px;
+            }
+            .id {
+                font-weight: bold;
+            }
+            .divider {
+                border-bottom: 1px dashed rgba(0,0,0,0.4);
+                margin: 0 10px 0 10px;
+            }
+            .footer {
+                bottom: 20px;
+                right: 20px;
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Adapt JSON Scanner</h1>
+        <h3>Scan found {{totalWarnings}} issues:</h3>
+        <div class="warning rounded_block">
+            {{#each violations}}
+                <div class="header">
+                    <span class="">{{#if negate}}Missing: {{else}}Deprecated: {{/if}}<span class="title code">{{@key}}</span></span> <span class="faded">(affects {{violations.length}} files)</span>
+                    <p>
+                        {{message}}
+                        {{#if link}}<br/>Link: <a href="{{link}}">{{link}}</a>{{/if}}
+                    </p>
+                </div>
+                <div class="files">
+                    {{#each violations}}
+                        <div class="file"><span class="code">{{filepath}}</span>{{#if id}}: <span class="id">{{id}}</span>{{/if}}</div>
+                    {{/each}}
+                </div>
+                <div class="divider"></div>
+            {{/each}}
+        </div>
+        <a href="https://github.com/taylortom/adapt-json-scanner/issues/new">
+            <div class="footer rounded_block">
+                Send feedback
+            </div>
+        </a>
+    </body>
+</html>

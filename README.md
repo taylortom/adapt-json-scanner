@@ -28,11 +28,13 @@ Otherwise, go to [the node project’s homepage](https://nodejs.org/) for instru
 
 There are various settings available in `config/config.json` to allow for more fine-tuned scanning.
 
-**`coursesDir`** *[String]*
-This is the folder the tool searches. Default value is `courses`, in the root folder for the tool.
+Attribute | Type | Description
+:-------- | :--- | :----------
+**`coursesDir`** | *String* | This is the folder the tool searches. Default value is `courses`, in the root folder for the tool.
 
-**`outputToFile`** *[Boolean]* 
-Whether you want the results to the scan output to a text file. 
+**`output.format`** | *String* | Determines how the output is formatted. Accepted values: html, console.
+**`output.autoOpen`** | *Boolean* | Whether the output file should open automatically when generated.
+
 
 #### blacklist.json
 

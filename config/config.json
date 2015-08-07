@@ -1,4 +1,7 @@
 {
   "coursesDir": "courses",
-  "outputToFile": true
+  "output": {
+    "format": "html",
+    "autoOpen": true
+  }
 }
