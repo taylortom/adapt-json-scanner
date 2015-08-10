@@ -17,6 +17,9 @@
                 font-weight: bold;
                 color: #333;
             }
+            a:hover {
+                color: #999;
+            }
             .code {
                 font-family: monospace;
             }
@@ -28,6 +31,14 @@
                 border-radius: 3px;
                 padding: 15px;
                 background-color: lightgray;
+            }
+            .rounded_block.button:hover {
+                color: #333;
+                background-color: darkgrey;
+                opacity: 1;
+            }
+            .warning {
+                margin-bottom: 80px;
             }
             .warning .header {
                 padding: 10px 0 10px 0;
@@ -54,10 +65,11 @@
                 border-bottom: 1px dashed rgba(0,0,0,0.4);
                 margin: 0 10px 0 10px;
             }
-            .footer {
+            .feedback {
                 bottom: 20px;
                 right: 20px;
-                position: absolute;
+                position: fixed;
+                opacity: 0.75;
             }
         </style>
     </head>
@@ -81,8 +93,8 @@
                 <div class="divider"></div>
             {{/each}}
         </div>
-        <a href="https://github.com/taylortom/adapt-json-scanner/issues/new">
-            <div class="footer rounded_block">
+        <a href="https://github.com/taylortom/adapt-json-scanner/issues/new" target="_blank">
+            <div class="feedback rounded_block button">
                 Send feedback
             </div>
         </a>
