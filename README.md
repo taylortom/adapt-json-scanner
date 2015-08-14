@@ -33,8 +33,10 @@ The following plugins are available. To use, specify their name in the `output.f
 
 Name        | Description
 :---------- | :----------
-`html`      | Creates a formatted HTML page in `/output/html/results.html`.
+`html`      | Creates a formatted HTML page in `/output/html/results.html (see below for example screenshot)`.
 `console`   | Logs the scan results JSON object to the console window.
+
+![HTML results example screenshot](https://github.com/taylortom/notes/blob/master/assets/json-scanner.png)
 
 ### blacklist.json
 This file contains the list of references which have been deprecated in v2.0.0 of Adapt. The references are organised by filename to keep things as neat as possible.
